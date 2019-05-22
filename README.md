@@ -38,7 +38,7 @@ az storage account create \
     --sku Standard_LRS \
     --kind StorageV2
 
-suffix=<unique suffix for the function app>
+# function app
 functionapp_name=cosmosdb-autoscale-$suffix
 
 az functionapp create --consumption-plan-location $location \
@@ -46,6 +46,6 @@ az functionapp create --consumption-plan-location $location \
   --os-type Windows \
   --resource-group $resource_group \
   --runtime dotnet \
-  --storage-account MyStorageAccount
+  --storage-account $storage_account_name
 
 ```
