@@ -1,0 +1,50 @@
+{
+  "schemaId": "azureMonitorCommonAlertSchema",
+  "data": {
+    "essentials": {
+      "alertId": "/subscriptions/<subscription id>/providers/Microsoft.AlertsManagement/alerts/<alert id>",
+      "alertRule": "Cosmos DB Database Autoscale Alert When Threshhold met",
+      "severity": "Sev3",
+      "signalType": "Metric",
+      "monitorCondition": "Fired",
+      "monitoringService": "Platform",
+      "alertTargetIDs": [
+        "/subscriptions/<subscription id>/resourcegroups/cosmosdb-autoscale/providers/microsoft.documentdb/databaseaccounts/kehilli"
+      ],
+      "originAlertId": "<subscription id>_cosmos_microsoft.insights_metricAlerts_Cosmos DB Database Autoscale Alert When Threshhold met_1672784968",
+      "firedDateTime": "2019-05-22T20:35:42.8290341Z",
+      "description": "",
+      "essentialsVersion": "1.0",
+      "alertContextVersion": "1.0"
+    },
+    "alertContext": {
+      "properties": null,
+      "conditionType": "SingleResourceMultipleMetricCriteria",
+      "condition": {
+        "windowSize": "PT1M",
+        "allOf": [
+          {
+            "metricName": "TotalRequestUnits",
+            "metricNamespace": "AzureMonitor",
+            "operator": "GreaterThan",
+            "threshold": "1",
+            "timeAggregation": "Average",
+            "dimensions": [
+              {
+                "name": "GlobalDatabaseAccountName",
+                "value": "<cosmos db account name>"
+              },
+              {
+                "name": "DatabaseName",
+                "value": "<the database name>"
+              }
+            ],
+            "metricValue": 1.8
+          }
+        ],
+        "windowStartTime": "2019-05-22T20:31:27.671Z",
+        "windowEndTime": "2019-05-22T20:32:27.671Z"
+      }
+    }
+  }
+}

@@ -20,7 +20,6 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 
     log.LogInformation($"{data}");
 
-    using (var client = )
     var offer = client.CreateOfferQuery()
             .Where(r => r.ResourceLink == collection.SelfLink).Single();
         offer = new OfferV2(offer, newthroughput);
