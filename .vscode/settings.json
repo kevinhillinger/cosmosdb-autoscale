@@ -1,0 +1,9 @@
+{
+  "azureFunctions.deploySubpath": "function/bin/Release/netcoreapp2.1/publish",
+  "azureFunctions.projectLanguage": "C#",
+  "azureFunctions.projectRuntime": "~2",
+  "debug.internalConsoleOptions": "neverOpen",
+  "azureFunctions.preDeployTask": "publish",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4
+}
